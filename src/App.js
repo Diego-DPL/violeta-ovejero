@@ -4,8 +4,8 @@ import Home from './pages/Home';
 import Booking from './pages/Booking';
 import Payment from './pages/Payment';
 import Confirmation from './pages/Confirmation';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 import { Container } from '@mui/material';
 
 function App() {
