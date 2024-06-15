@@ -1,8 +1,46 @@
 .footer {
     display: flex;
     flex-flow: column;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.logoFooter{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.topFooter {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+.socialMediaIconsFooter{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.socialMedia{
+    margin: 5px;
+
 }
 
 .footerDivider {
-    border: 2px solid #EBEAED;
+    border: 1px solid #EBEAED;
+}
+
+.derechos {
+    font-size: 1rem;
+    color: #393939;
+    margin: 0;
+    padding: 1rem;
 }

@@ -2,13 +2,25 @@ import React from 'react';
 import './Footer.css';
 import { Box, Typography, Link, IconButton } from '@mui/material';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import XIcon from '@mui/icons-material/X';
 
 const Footer = () => {
   return (
     <div className='footer'>
-      <p>Violeta Ovejero</p>
+
+      <div className='topFooter'>
+        <p className='logoFooter'>Violeta Ovejero</p>
+        <div className='socialMediaIconsFooter'> 
+          <div className='socialMedia'><InstagramIcon /></div>
+          <div className='socialMedia'><FacebookIcon /></div>
+          <div className='socialMedia'><XIcon /></div>
+        </div>
+
+      </div>
+
       <div className='footerDivider'></div>
-      <div className='socialMedia'>ig</div>
+      <p className='derechos'>© Todos los derechos reservados 2024</p>
     </div>
 
 

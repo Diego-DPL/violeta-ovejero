@@ -7,10 +7,12 @@ import Confirmation from './pages/Confirmation';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import { Container } from '@mui/material';
+import './App.css';
 
 function App() {
   return (
     <>
+    <div className='app'> 
       <Header />
       <Container component="main" sx={{ flexGrow: 1, mt: 4 }}>
         <Routes>
@@ -21,6 +23,7 @@ function App() {
         </Routes>
       </Container>
       <Footer />
+      </div>
     </>
   );
 }
