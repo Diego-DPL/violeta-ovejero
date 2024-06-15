@@ -1,0 +1,8 @@
+.footer {
+    display: flex;
+    flex-flow: column;
+}
+
+.footerDivider {
+    border: 2px solid #EBEAED;
+}

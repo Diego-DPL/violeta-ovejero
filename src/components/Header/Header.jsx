@@ -1,18 +1,20 @@
 import React from 'react';
 import './Header.css';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import { Link } from 'react-router-dom';
-
+import Menu from '../Menu/Menu';
+import LoginMenu from '../LoginMenu/LoginMenu';
+import Logo from '../Logo/Logo';
 
 const Header = () => {
+
+  const opciones = ['Sobre Nosotros', 'Precios', 'Contacto' , 'Servicios'];
+
   return (
-    <AppBar class="header"  >
-      <Toolbar>
+    <div className="header"  >
+      <Logo/>
+      <Menu opciones={opciones}/>
+      <LoginMenu/>
+
+      {/* <Toolbar>
         <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
           <MenuIcon />
         </IconButton>
@@ -36,8 +38,8 @@ const Header = () => {
             Confirmación
           </Link>
         </Button>
-      </Toolbar>
-    </AppBar>
+      </Toolbar> */}
+    </div>
   );
 };
 

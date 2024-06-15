@@ -1,0 +1,9 @@
+.logoContainer {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,28 @@
+.loginContainer{
+    color: white;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    gap: 20%;
+    font-family: sans-serif;
+    align-content: center;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.singUpContainer{
+    border: 2px solid white;
+    border-radius: 100px;
+    width: 150px;
+    height: 40px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.singUpText{
+    margin: 5px 5px 5px 5px;
+}

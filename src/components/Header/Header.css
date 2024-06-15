@@ -1,4 +1,11 @@
 .header {
     background-color: #106579;
-    position: static;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15%; /* Espacio entre columnas, opcional */
+    height: 8vh;
+    justify-content: center;
+    justify-items: center;
+    align-content: space-around;
 }
+
