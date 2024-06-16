@@ -1,0 +1,46 @@
+.home{
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio entre las columnas */
+    align-items: center; /* Centra el contenido verticalmente */
+    padding: 20px; /* Añade padding alrededor del contenedor */
+}
+
+.columUno, .columDos {
+    flex: 1; /* Permite que las columnas crezcan para ocupar el espacio disponible */
+    text-align: center; /* Centra el texto dentro de cada columna */
+    padding: 10px; /* Añade padding alrededor del contenido de cada columna */
+  }
+
+.imgVioletaHome{
+    width: 70%;
+    height: 70%;
+}
+  
+.circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(15%, -55%);
+    width: 500px;  /* Ajusta el tamaño según sea necesario */
+    height: 500px; /* Ajusta el tamaño según sea necesario */
+    background-color: #106579;  /* Ajusta el color y la opacidad según sea necesario */
+    border-radius: 50%;
+    z-index: -1;  /* Asegúrate de que el círculo esté detrás de la imagen */
+}
+
+.contratarContainer{
+    border: 2px solid #106579;
+    background-color: #106579;
+    border-radius: 100px;
+    width: 300px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contratar{
+    margin: 5px 5px 5px 5px;
+    font-weight: bold;
+    color: white;
+}
