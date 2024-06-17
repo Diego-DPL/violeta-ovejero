@@ -31,7 +31,12 @@
 
 .socialMedia{
     margin: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
 
+.socialMedia:hover{
+    transform: scale(1.2); 
+    color: #878686;
 }
 
 .footerDivider {

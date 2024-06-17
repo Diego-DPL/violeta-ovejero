@@ -11,6 +11,18 @@
     justify-content: center;
 }
 
+.singUpLink, .loginLink{
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.loginLink:hover, .singUpLink:hover {
+    color: #878686;
+    transform: scale(1.1); 
+}
+
+
 .singUpContainer{
     border: 2px solid white;
     border-radius: 100px;
@@ -21,6 +33,7 @@
     align-items: center;
     flex-direction: row;
     justify-content: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .singUpText{

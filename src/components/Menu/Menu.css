@@ -18,4 +18,5 @@
 
 .opcion:hover {
     color: #878686;
+    transform: scale(1.2); 
 }

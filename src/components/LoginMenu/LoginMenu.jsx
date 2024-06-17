@@ -1,17 +1,24 @@
 import React from 'react';
 import './LoginMenu.css';
+import { Link } from 'react-router-dom';
 
 function LoginMenu() {
     return (
         <div className='loginContainer'>
-            <div className='Login'>
+            
+            <Link to="/login" className='loginLink'>
             Login
-            </div>
-            <div className='singUpContainer'>
-                <p className='singUpText'>Sing Up</p>
-            </div>
+            </Link>
+
+            <Link to="/singUp" className='singUpLink'>
+                <div className='singUpContainer'>
+                    <p className='singUpText'>Sing Up</p>
+                </div>
+            </Link>
+
         </div>
     )
 }
+
 
 export default LoginMenu
