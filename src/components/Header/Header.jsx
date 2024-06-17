@@ -25,7 +25,7 @@ const Header = () => {
 
   return (
     <div className="header"  >
-      <Logo cssClass="logoContainer"/>
+      <Logo cssClass='logoContainer' />
       <Menu opciones={opciones}/>
       <LoginMenu/>
 

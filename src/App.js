@@ -16,20 +16,23 @@ function App() {
     "Servicio":"Terapia Individual",
     "Precio":"50",
     "Moneda": "€",
-    "Características":["1 Hora de sesión", "Cancelación en 24h", "Atención personalizada", "Diagnostico", "Soporte 24h"]
+    "Características":["1 Hora de sesión", "Cancelación en 24h", "Atención personalizada", "Diagnostico", "Soporte 24h"],
+    "Seleccionado": true
   },
   {
     "Servicio":"Terapia de Parejas",
     "Precio":"60",
     "Moneda": "€",
-    "Características":["1 Hora de sesión", "Cancelación en 24h", "Atención personalizada", "Diagnostico", "Soporte 24h"]
+    "Características":["1 Hora de sesión", "Cancelación en 24h", "Atención personalizada", "Diagnostico", "Soporte 24h"],
+    "Seleccionado": false
   }
   ,
   {
     "Servicio":"Terapia con Animales",
     "Precio":"70",
     "Moneda": "€",
-    "Características":["1 Hora de sesión", "Cancelación en 24h", "Atención personalizada", "Diagnostico", "Soporte 24h"]
+    "Características":["1 Hora de sesión", "Cancelación en 24h", "Atención personalizada", "Diagnostico", "Soporte 24h"],
+    "Seleccionado": false
   }
 ];
 
@@ -43,7 +46,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/prices" element={<Prices servicios={servicios}/>} />
           <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact" element={<Contact servicios={servicios}/>} />
           <Route path="/services" element={<Services />} />
         </Routes>
       {/* </Container> */}
