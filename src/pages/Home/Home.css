@@ -81,12 +81,11 @@
     margin-top: 10%;
     margin-left: -15%;
     opacity: 0;
-    transition: margin-left 2s ease, opacity 1.5s ease, width 1.5s ease;
+    transition: margin-left 2s ease, opacity 1.5s ease;
 }
 
 
 .logoTransparente:hover{
     opacity: 1;
     margin-left: -12%;
-    width: 21%;
 }

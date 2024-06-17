@@ -6,7 +6,22 @@ import Logo from '../Logo/Logo';
 
 const Header = () => {
 
-  const opciones = ['Sobre Nosotros', 'Precios', 'Contacto' , 'Servicios'];
+  const opciones = [{
+    "Name":"Sobre Nosotros",
+    "To":"about"
+  },
+  {
+    "Name":"Precios",
+    "To":"prices"
+  },
+  {
+    "Name":"Contacto",
+    "To":"contact"
+  },
+  {
+    "Name":"Servicios",
+    "To":"services"
+  }];
 
   return (
     <div className="header"  >

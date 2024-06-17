@@ -1,27 +1,52 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home/Home';
-import Booking from './pages/Booking';
-import Payment from './pages/Payment';
-import Confirmation from './pages/Confirmation';
+import Prices from './pages/Prices/Prices';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import { Container } from '@mui/material';
 import './App.css';
+import About from './pages/About/About';
+import Contact from './pages/Contact/Contact';
+import Services from './pages/Servicios/Services';
 
 function App() {
+
+  const servicios = [{
+    "Servicio":"Terapia Individual",
+    "Precio":"50",
+    "Moneda": "€",
+    "Características":["1 Hora de sesión", "Cancelación en 24h", "Atención personalizada", "Diagnostico", "Soporte 24h"]
+  },
+  {
+    "Servicio":"Terapia de Parejas",
+    "Precio":"60",
+    "Moneda": "€",
+    "Características":["1 Hora de sesión", "Cancelación en 24h", "Atención personalizada", "Diagnostico", "Soporte 24h"]
+  }
+  ,
+  {
+    "Servicio":"Terapia con Animales",
+    "Precio":"70",
+    "Moneda": "€",
+    "Características":["1 Hora de sesión", "Cancelación en 24h", "Atención personalizada", "Diagnostico", "Soporte 24h"]
+  }
+];
+
+
   return (
     <>
     <div className='app'> 
       <Header />
-      <Container component="main" sx={{ flexGrow: 1, mt: 4 }}>
+      {/* <Container component="main" sx={{ flexGrow: 1, mt: 4 }}> */}
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/booking" element={<Booking />} />
-          <Route path="/payment" element={<Payment />} />
-          <Route path="/confirmation" element={<Confirmation />} />
+          <Route path="/prices" element={<Prices servicios={servicios}/>} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/services" element={<Services />} />
         </Routes>
-      </Container>
+      {/* </Container> */}
       <Footer />
       </div>
     </>
