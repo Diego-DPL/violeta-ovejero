@@ -1,9 +1,9 @@
 import React from 'react';
 import './Logo.css';
 
-function Logo() {
+function Logo({cssClass}) {
     return (
-        <div className='logoContainer'>
+        <div className={cssClass}> 
             Violeta Ovejero
         </div>
     )

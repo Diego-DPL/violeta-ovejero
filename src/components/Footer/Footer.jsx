@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import { Box, Typography, Link, IconButton } from '@mui/material';
+import Logo from '../Logo/Logo';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import XIcon from '@mui/icons-material/X';
@@ -10,7 +10,7 @@ const Footer = () => {
     <div className='footer'>
 
       <div className='topFooter'>
-        <p className='logoFooter'>Violeta Ovejero</p>
+        <Logo cssClass="logoFooter"/>
         <div className='socialMediaIconsFooter'> 
           <div className='socialMedia'><InstagramIcon /></div>
           <div className='socialMedia'><FacebookIcon /></div>

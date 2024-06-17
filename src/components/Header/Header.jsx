@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <div className="header"  >
-      <Logo/>
+      <Logo cssClass="logoContainer"/>
       <Menu opciones={opciones}/>
       <LoginMenu/>
 
