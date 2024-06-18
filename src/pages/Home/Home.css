@@ -1,7 +1,7 @@
+
 .home{
     display: flex;
     justify-content: space-between; /* Distribuye el espacio entre las columnas */
-    padding: 20px; /* Añade padding alrededor del contenedor */
 }
 
 .columUno, .columDos {
@@ -93,9 +93,7 @@
 .scrolServicios{
     display: flex;
     flex-direction: column;
-    width: 100vw;
     height: 100vh;
-    margin-left: -25%;
     background-color: #106579;
 }
 .tituloScroll1{
