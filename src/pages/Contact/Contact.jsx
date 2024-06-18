@@ -15,18 +15,23 @@ function Contact({ servicios }) {
   };
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = "648817588"; // Reemplaza con el número de violeta
+    const phoneNumber = "608008081"; // Reemplaza con el número de violeta
     const url = `https://wa.me/${phoneNumber}`;
     window.open(url, "_blank");
   };
 
   const textFieldStyles = {
+    "& label": {
+        color: "white",
+      },
     "& .MuiOutlinedInput-root": {
       "& fieldset": {
         borderColor: "#408494",
+        borderRadius: "10px",
+        borderWidth: "2px",
       },
       "&:hover fieldset": {
-        borderColor: "#408494",
+        borderColor: "white",
       },
       "&.Mui-focused fieldset": {
         borderColor: "#408494",
@@ -101,7 +106,7 @@ function Contact({ servicios }) {
           <Grid item xs={12} sm={8} style={{ textAlign: "center" }}>
             <div className="contact-whatssap">
               <p className="contact-mensaje-whatssap">
-                Si lo deseas, ponte en contacto conmigo vía whatssap!
+                Si lo deseas, ponte en contacto conmigo vía whatssap
               </p>
               <IconButton
                 aria-label="WhatsApp"
