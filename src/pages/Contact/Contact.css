@@ -1,32 +1,54 @@
 .contactContainer{
     background-color: #106579;
-    height: 80vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    height: 100vh;
+    margin: 0;
 } 
 
+.gridContact{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 10px;
+    width: 50%;
+    max-width: 600px;
+}
+
 .contactTitle{
+    grid-row: 1;
     color: white;
     font-size: 42px;
     font-family: sans-serif;
     font-weight: bold;
-    letter-spacing: -0.4px;
     text-align: center;
-    vertical-align: top;
-    line-height: 52px;
-    width: 50%;
-    margin-top: -20px;
 }
 
-.contactForm{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
+.nombreContact{
+    
+    grid-row: 2;
+    grid-column: 1;
+    
 }
 
+.emailContact{
+    
+    grid-row: 3;
+    grid-column: 1  ;
+}
+
+.serviciosContact{
+    grid-row: 3;
+    grid-column: 2  / span 2;
+}
+
+.texAreaContacto{
+    grid-row: 4;
+    grid-column: 1 / span 3;
+}
+
+.enviarBotonContacto{
+    grid-row: 5;
+    grid-column: 1 / span 3;
+}
