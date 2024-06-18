@@ -4,7 +4,6 @@ import Home from './pages/Home/Home';
 import Prices from './pages/Prices/Prices';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import { Container } from '@mui/material';
 import './App.css';
 import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';

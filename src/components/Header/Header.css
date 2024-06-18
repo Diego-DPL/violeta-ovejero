@@ -7,6 +7,8 @@
     justify-content: center;
     justify-items: center;
     align-content: space-around;
+    top: 0;
+    position: sticky;
  
 }
 
