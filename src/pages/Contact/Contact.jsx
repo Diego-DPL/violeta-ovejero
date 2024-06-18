@@ -88,7 +88,7 @@ function Contact({ servicios }) {
           </Grid>
           <Grid item xs={12}>
             <TextField
-              label="Mensaje"
+              label="Escribe aquí tu mensaje..."
               multiline
               rows={4}
               fullWidth
@@ -119,7 +119,7 @@ function Contact({ servicios }) {
               color="primary"
               fullWidth
               style={{
-                marginTop: "1rem",
+                marginTop: "5px",
                 backgroundColor: "#E93A7D",
                 borderRadius: "40px",
                 paddingBottom: "10px",

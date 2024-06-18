@@ -1,0 +1,9 @@
+.about-container{
+    background-color: #106579;
+    height: 80vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
