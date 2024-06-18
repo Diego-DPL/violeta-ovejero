@@ -89,3 +89,38 @@
     opacity: 1;
     margin-left: -12%;
 }
+
+.scrolServicios{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    margin-left: -25%;
+    background-color: #106579;
+}
+.tituloScroll1{
+    color: white; 
+    font-size: 58px;
+    font-family: serif;
+    font-weight: bold;
+    letter-spacing: -1px;
+    text-align: left;
+    vertical-align: top;
+    width: 90%;
+    margin-top:10%;
+    margin-left: 20%;
+    line-height: 70px;
+}
+
+.subtituloScroll1{
+    color: white; 
+    font-size: 38px;
+    font-family: serif;
+    letter-spacing: -1px;
+    text-align: left;
+    vertical-align: top;
+    width: 90%;
+    margin-top: 1.5%;
+    margin-left: 22%;
+    line-height: 1px;
+}

@@ -21,6 +21,12 @@ function Home() {
           <div className='circle'></div>
         </div>
       </div>
+      <div className='scrolServicios'> 
+        <h1 className='tituloScroll1'>Somos especialistas en:</h1>
+        <h2 className='subtituloScroll1'>Trastornos de la Personalidad. </h2>
+        <h2 className='subtituloScroll1'>Psicologia perinatal. </h2>
+        <h2 className='subtituloScroll1'>Trastornos de la Conducta alimentaria. </h2>
+      </div>
     </Container> 
 
   );
