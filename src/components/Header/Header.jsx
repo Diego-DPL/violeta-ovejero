@@ -21,6 +21,10 @@ const Header = () => {
   {
     "Name":"Servicios",
     "To":"services"
+  },
+  {
+    "Name":"Eventos",
+    "To":"eventos"
   }];
 
   return (
