@@ -1,19 +1,30 @@
 import React from "react";
 import "./Home.css";
 import { Container } from "@mui/material";
-import { motion } from "framer-motion";
+import { motion, useScroll, useInView, useMotionValueEvent } from "framer-motion";
 
 function Home() {
+
+  const { scrollY , scrollYProgress} = useScroll();
+
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    latest = 1 - latest;
+    console.log("Page scroll: ", latest)
+  });
+
   return (
     <>
       <Container
         component="main"
         sx={{ flexGrow: 1, mt: 4, position: "fixed", marginLeft: 25 }}
       >
+
         <motion.div
           className="home"
-          initial={{ opacity: 1 }}
-          transition={{ duration: 0.8, opacity: 0 }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          style={{ opacity: scrollYProgress }}
+          transition={{ duration: 0.5 }}
         >
           <div className="columUno">
             <h1 className="tituloHome">
