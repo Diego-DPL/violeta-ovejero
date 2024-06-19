@@ -97,6 +97,29 @@
     background-color: #106579;
     z-index: 1;
 }
+.scrolPersonalidad{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #106579;
+    z-index: 1;
+}
+
+.scrolPerinatal{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #106579;
+    z-index: 1;
+}
+
+.scrolTCA{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #106579;
+    z-index: 1;
+}
 
 .serviciosTitulos{
     margin-left: 20%;

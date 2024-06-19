@@ -1,21 +1,18 @@
 import React from "react";
 import "./Home.css";
-import { useRef } from "react";
 import { Container } from "@mui/material";
-import { motion, useScroll, useMotionValueEvent, useMotionValue, useInView} from "framer-motion";
+import { motion, useScroll, useMotionValueEvent, useMotionValue} from "framer-motion";
 
 function Home() {
 
   const {scrollYProgress} = useScroll();
-  const ref = useRef(null);
-  const isInView = useInView(ref);
 
   let scrollTop = useMotionValue(0);
 
   useMotionValueEvent(scrollYProgress, "change", (value) => {
-    scrollTop.set(((1 - value ) * 1.75)- 0.5);
-    console.log(scrollTop.get());
+    scrollTop.set(((1 - value ) * 1.95)- 0.9);
   });
+
 
   return (
     <>
@@ -61,25 +58,65 @@ function Home() {
         </motion.div>
       </Container>
 
-      <motion.div
-        className="scrolServicios"
-        // style={{
-        //   transform: isInView ? "none" : "translateX(-200px)",
-        //   opacity: isInView ? 1 : 0,
-        //   transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
-        // }}
-      >
+      <motion.div className="scrolServicios">
         <motion.div
           className="serviciosTitulos"
-
+          initial={{ opacity: 0, scale: 0.6 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.5 }}
         >
           <h1 className="tituloScroll1">Especialista en:</h1>
           <h2 className="subtituloScroll1">Trastornos de la Personalidad. </h2>
           <h2 className="subtituloScroll1">Psicologia perinatal. </h2>
           <h2 className="subtituloScroll1">Trastornos de la Conducta alimentaria.</h2>
         </motion.div>
+      </motion.div>
 
+      <motion.div className="scrolPersonalidad">
+        <motion.div
+          className="serviciosTitulos"
+          initial={{ opacity: 0, scale: 0.6 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.5 }}
+        >
+          <h1 className="tituloScroll1">Transtornos de la personalidad:</h1>
+          <h2 className="subtituloScroll1">Los trastornos de la personalidad son  </h2>
+          <h2 className="subtituloScroll1">formas de pensar y actuar que son muy diferentes de lo habitual. </h2>
+          <h2 className="subtituloScroll1">Estas diferencias pueden hacer que a las personas les resulte difícil </h2>
+          <h2 className="subtituloScroll1">llevarse bien con los demás y manejar situaciones cotidianas.</h2>
+        </motion.div>
+      </motion.div>
 
+      <motion.div className="scrolPerinatal">
+        <motion.div
+          className="serviciosTitulos"
+          initial={{ opacity: 0, scale: 0.6 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.5 }}
+        >
+          <h1 className="tituloScroll1">Psicologia Perinatal:</h1>
+          <h2 className="subtituloScroll1">La psicología perinatal se enfoca en el bienestar emocional   </h2>
+          <h2 className="subtituloScroll1">de las madres y sus bebés durante el embarazo y después del parto. </h2>
+          <h2 className="subtituloScroll1">Ayuda a las madres a manejar el estrés, la ansiedad y otros sentimientos </h2>
+          <h2 className="subtituloScroll1">para asegurar una experiencia positiva y saludable para ambos.</h2>
+        </motion.div>
+      </motion.div>
+
+      <motion.div className="scrolTCA">
+        <motion.div
+          className="serviciosTitulos"
+          initial={{ opacity: 0, scale: 0.6 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.5 }}
+        >
+          <h1 className="tituloScroll1">Transtornos de la Conducta Alimenticia:</h1>
+          <h2 className="subtituloScroll1">Los trastornos de la conducta alimentaria son problemas graves relacionados con la comida.  </h2>
+          <h2 className="subtituloScroll1">Las personas con estos trastornos pueden comer muy poco o en exceso, </h2>
+          <h2 className="subtituloScroll1">Ayuda a las madres a manejar el estrés, la ansiedad y otros sentimientos </h2>
+          <h2 className="subtituloScroll1">afectando su salud física y emocional.</h2>
+
+        
+        </motion.div>
       </motion.div>
     </>
   );
