@@ -1,15 +1,20 @@
 import React from "react";
 import "./Home.css";
+import { useRef } from "react";
 import { Container } from "@mui/material";
-import { motion, useScroll, useInView, useMotionValueEvent } from "framer-motion";
+import { motion, useScroll, useMotionValueEvent, useMotionValue, useInView} from "framer-motion";
 
 function Home() {
 
-  const { scrollY , scrollYProgress} = useScroll();
+  const {scrollYProgress} = useScroll();
+  const ref = useRef(null);
+  const isInView = useInView(ref);
 
-  useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    latest = 1 - latest;
-    console.log("Page scroll: ", latest)
+  let scrollTop = useMotionValue(0);
+
+  useMotionValueEvent(scrollYProgress, "change", (value) => {
+    scrollTop.set(((1 - value ) * 1.75)- 0.5);
+    console.log(scrollTop.get());
   });
 
   return (
@@ -23,7 +28,8 @@ function Home() {
           className="home"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          style={{ opacity: scrollYProgress }}
+          style={{ opacity: scrollTop, 
+          }}
           transition={{ duration: 0.5 }}
         >
           <div className="columUno">
@@ -57,16 +63,23 @@ function Home() {
 
       <motion.div
         className="scrolServicios"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
+        // style={{
+        //   transform: isInView ? "none" : "translateX(-200px)",
+        //   opacity: isInView ? 1 : 0,
+        //   transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+        // }}
       >
-        <h1 className="tituloScroll1">Somos especialistas en:</h1>
-        <h2 className="subtituloScroll1">Trastornos de la Personalidad. </h2>
-        <h2 className="subtituloScroll1">Psicologia perinatal. </h2>
-        <h2 className="subtituloScroll1">
-          Trastornos de la Conducta alimentaria.
-        </h2>
+        <motion.div
+          className="serviciosTitulos"
+
+        >
+          <h1 className="tituloScroll1">Especialista en:</h1>
+          <h2 className="subtituloScroll1">Trastornos de la Personalidad. </h2>
+          <h2 className="subtituloScroll1">Psicologia perinatal. </h2>
+          <h2 className="subtituloScroll1">Trastornos de la Conducta alimentaria.</h2>
+        </motion.div>
+
+
       </motion.div>
     </>
   );

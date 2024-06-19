@@ -95,13 +95,20 @@
     margin-top: 100vh;
     height: 100vh;
     background-color: #106579;
+    z-index: 1;
 }
+
+.serviciosTitulos{
+    margin-left: 20%;
+    margin-top: 20vh;
+}
+
 .tituloScroll1{
     color: white; 
     font-size: 58px;
     font-family: serif;
     font-weight: bold;
-    letter-spacing: -1px;
+    letter-spacing: 1px;
     text-align: left;
     vertical-align: top;
     width: 90%;
@@ -112,9 +119,12 @@
     color: white; 
     font-size: 38px;
     font-family: serif;
-    letter-spacing: -1px;
+    letter-spacing: 1px;
     text-align: left;
     vertical-align: top;
     width: 90%;
-    line-height: 1px;
+    line-height: 20px;
 }
+
+
+
