@@ -80,10 +80,11 @@ function Home() {
           transition={{ duration: 1.5 }}
         >
           <h1 className="tituloScroll1">Transtornos de la personalidad:</h1>
-          <h2 className="subtituloScroll1">Los trastornos de la personalidad son  </h2>
-          <h2 className="subtituloScroll1">formas de pensar y actuar que son muy diferentes de lo habitual. </h2>
-          <h2 className="subtituloScroll1">Estas diferencias pueden hacer que a las personas les resulte difícil </h2>
-          <h2 className="subtituloScroll1">llevarse bien con los demás y manejar situaciones cotidianas.</h2>
+          <h2 className="subtituloScroll1">
+          Los trastornos de la personalidad son 
+          formas de pensar y actuar que son muy diferentes de lo habitual.
+          Estas diferencias pueden hacer que a las personas les resulte difícil 
+          llevarse bien con los demás y manejar situaciones cotidianas.</h2>
         </motion.div>
       </motion.div>
 
@@ -95,10 +96,10 @@ function Home() {
           transition={{ duration: 1.5 }}
         >
           <h1 className="tituloScroll1">Psicologia Perinatal:</h1>
-          <h2 className="subtituloScroll1">La psicología perinatal se enfoca en el bienestar emocional   </h2>
-          <h2 className="subtituloScroll1">de las madres y sus bebés durante el embarazo y después del parto. </h2>
-          <h2 className="subtituloScroll1">Ayuda a las madres a manejar el estrés, la ansiedad y otros sentimientos </h2>
-          <h2 className="subtituloScroll1">para asegurar una experiencia positiva y saludable para ambos.</h2>
+          <h2 className="subtituloScroll1">La psicología perinatal se enfoca en el bienestar emocional 
+          de las madres y sus bebés durante el embarazo y después del parto.
+          Ayuda a las madres a manejar el estrés, la ansiedad y otros sentimientos 
+          para asegurar una experiencia positiva y saludable para ambos.</h2>
         </motion.div>
       </motion.div>
 
@@ -110,10 +111,10 @@ function Home() {
           transition={{ duration: 1.5 }}
         >
           <h1 className="tituloScroll1">Transtornos de la Conducta Alimenticia:</h1>
-          <h2 className="subtituloScroll1">Los trastornos de la conducta alimentaria son problemas graves relacionados con la comida.  </h2>
-          <h2 className="subtituloScroll1">Las personas con estos trastornos pueden comer muy poco o en exceso, </h2>
-          <h2 className="subtituloScroll1">Ayuda a las madres a manejar el estrés, la ansiedad y otros sentimientos </h2>
-          <h2 className="subtituloScroll1">afectando su salud física y emocional.</h2>
+          <h2 className="subtituloScroll1">Los trastornos de la conducta alimentaria son problemas graves relacionados con la comida. 
+          Las personas con estos trastornos pueden comer muy poco o en exceso,
+          Ayuda a las madres a manejar el estrés, la ansiedad y otros sentimientos
+          afectando su salud física y emocional.</h2>
 
         
         </motion.div>
