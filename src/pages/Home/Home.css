@@ -90,8 +90,7 @@
 }
 
 .scrolServicios{
-    display: flex;
-    flex-direction: column;
+    
     margin-top: 100vh;
     height: 100vh;
     background-color: #106579;

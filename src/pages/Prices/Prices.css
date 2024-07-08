@@ -1,65 +1,8 @@
-.pricesContainer{
-    background-color: #106579;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}   
-
-.servicios-list{
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-    align-items: center;
-}
-
-.servicio-card{
-    background-color: #106579;
-    border: 1px solid #408494;
-    border-radius: 5px;
-    padding: 0px 40px 20px 40px;
-    color: white;
-    max-height: 45vh;
-    overflow: hidden;
-}   
-
-.pricesTitle, .pricesDescription {
-    color: white;
-}
-
-.pricesTitle{
-    font-size: 42px;
-    font-family: sans-serif;
-    font-weight: bold;
-    letter-spacing: -0.4px;
-    text-align: center;
-    vertical-align: top;
-    line-height: 52px;
-    width: 25%;
-    margin-top: -20px;
-}
-
-.pricesDescription {
-    width: 35%;
-    font-size: 18px;
-    font-family: sans-serif;
-    text-align: center;
-    vertical-align: top;
-    line-height: 32px;
-    margin-top: -20px;
-}
 
 .serviceTitle{
     font-size: 22px;
     text-align: left;
     vertical-align: top;
-}
-
-.priceDetailContainer{
-    display: flex;
-    justify-content: center;
 }
 
 .price{
@@ -79,10 +22,6 @@
     font-weight: bold;
     margin-top: 0px;
     margin-bottom: 0px;
-}
-
-.caracteristica {
-    text-align: left;
 }
 
 .contratar-servicio {

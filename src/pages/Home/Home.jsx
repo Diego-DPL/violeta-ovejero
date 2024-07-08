@@ -61,9 +61,9 @@ function Home() {
       <motion.div className="scrolServicios">
         <motion.div
           className="serviciosTitulos"
-          initial={{ opacity: 0, scale: 0.6 }}
+          initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.5 }}
+          transition={{ duration: 0.4 }}
         >
           <h1 className="tituloScroll1">Especialista en:</h1>
           <h2 className="subtituloScroll1">Trastornos de la Personalidad. </h2>
@@ -75,9 +75,9 @@ function Home() {
       <motion.div className="scrolPersonalidad">
         <motion.div
           className="serviciosTitulos"
-          initial={{ opacity: 0, scale: 0.6 }}
+          initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.5 }}
+          transition={{ duration: 0.4 }}
         >
           <h1 className="tituloScroll1">Transtornos de la personalidad:</h1>
           <h2 className="subtituloScroll1">
@@ -91,9 +91,9 @@ function Home() {
       <motion.div className="scrolPerinatal">
         <motion.div
           className="serviciosTitulos"
-          initial={{ opacity: 0, scale: 0.6 }}
+          initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.5 }}
+          transition={{ duration: 0.4 }}
         >
           <h1 className="tituloScroll1">Psicologia Perinatal:</h1>
           <h2 className="subtituloScroll1">La psicología perinatal se enfoca en el bienestar emocional 
@@ -106,9 +106,9 @@ function Home() {
       <motion.div className="scrolTCA">
         <motion.div
           className="serviciosTitulos"
-          initial={{ opacity: 0, scale: 0.6 }}
+          initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.5 }}
+          transition={{ duration: 0.4 }}
         >
           <h1 className="tituloScroll1">Transtornos de la Conducta Alimenticia:</h1>
           <h2 className="subtituloScroll1">Los trastornos de la conducta alimentaria son problemas graves relacionados con la comida. 
