@@ -90,12 +90,12 @@
 }
 
 .scrolServicios{
-    
     margin-top: 100vh;
     height: 100vh;
     background-color: #106579;
     z-index: 1;
 }
+
 .scrolPersonalidad{
     display: flex;
     flex-direction: column;

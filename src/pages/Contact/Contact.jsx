@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Contact.css";
+//import "./Contact.css";
 import { TextField, Button, MenuItem, IconButton, Grid } from "@mui/material";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
@@ -43,9 +43,9 @@ function Contact({ servicios }) {
   };
 
   return (
-    <div className="contactContainer">
-      <h4 className="contact-title">Contacta conmigo</h4>
-      <form onSubmit={handleSubmit} className="contact-formulario">
+    <div className="contactContainer bg-bg1 h-[80vh] flex flex-col items-center justify-center overflow-hidden">
+      <h4 className="contact-title text-white text-custom42 font-sans text-center align-top leading-custom52 font-bold tracking-tightCustom">Contacta conmigo</h4>
+      <form onSubmit={handleSubmit} className="contactFormulario w-[60%]">
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
             <TextField
@@ -104,8 +104,8 @@ function Contact({ servicios }) {
             />
           </Grid>
           <Grid item xs={12} sm={8} style={{ textAlign: "center" }}>
-            <div className="contact-whatssap">
-              <p className="contact-mensaje-whatssap">
+            <div className="contactWhatssap border-2 border-customBorder hover:border-white rounded-lg flex flex-row justify-center items-center gap-[10px]">
+              <p className="contactMensajeWhatssap text-white">
                 Si lo deseas, ponte en contacto conmigo vía whatssap
               </p>
               <IconButton
