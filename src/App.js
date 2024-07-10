@@ -9,6 +9,7 @@ import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
 import Services from './pages/Servicios/Services';
 import Eventos from './pages/Eventos/Eventos';
+import Login from './pages/Login/Login';
 
 function App() {
 
@@ -49,6 +50,7 @@ function App() {
           <Route path="/contact" element={<Contact servicios={servicios}/>} />
           <Route path="/services" element={<Services />} />
           <Route path="/eventos" element={<Eventos />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       {/* </Container> */}
       <Footer />

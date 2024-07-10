@@ -19,6 +19,7 @@ module.exports = {
 		},
 		fontSize: {
 			custom58: '22px',
+			custom30: '30px',
 			custom38: '38px',
 			custom42: '42px',
 			custom58: '58px',
