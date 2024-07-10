@@ -10,6 +10,7 @@ import Contact from './pages/Contact/Contact';
 import Services from './pages/Servicios/Services';
 import Eventos from './pages/Eventos/Eventos';
 import Login from './pages/Login/Login';
+import SingUp from './pages/SingUp/SingUp';
 
 function App() {
 
@@ -51,6 +52,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/eventos" element={<Eventos />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/singUp" element={<SingUp />} />
         </Routes>
       {/* </Container> */}
       <Footer />

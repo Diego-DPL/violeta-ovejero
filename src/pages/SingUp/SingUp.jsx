@@ -3,7 +3,7 @@ import { TextField, Button, IconButton, Grid, OutlinedInput, InputAdornment, For
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
-function Login() {
+function SingUp() {
   const [showPassword, setShowPassword] = useState(false);
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
@@ -45,12 +45,33 @@ function Login() {
             Ofrecemos servicios de psicología personalizados. Nuestro equipo te ayuda a superar desafíos emocionales y mejorar tu bienestar mental.
           </h2>
         </div>
-        <div className="loginSpace ml-[20%] mt-[15%] w-1/2">
+        <div className="loginSpace ml-[20%] mt-[5%] w-1/2">
           <h1 className="text-4xl text-white font-serif font-bold tracking-tightCustom text-center align-top w-[90%] leading-custom70">
-            Iniciar Sesion
+            Registrarte
           </h1>
           <TextField
-            label="Usuario"
+            label="Nombre"
+            fullWidth
+            margin="normal"
+            required
+            sx={textFieldStyles}
+          />
+          <TextField
+            label="Apellidos"
+            fullWidth
+            margin="normal"
+            required
+            sx={textFieldStyles}
+          />
+          <TextField
+            label="Nombre de Usuario"
+            fullWidth
+            margin="normal"
+            required
+            sx={textFieldStyles}
+          />
+          <TextField
+            label="Correo Electronico"
             fullWidth
             margin="normal"
             required
@@ -76,6 +97,26 @@ function Login() {
               label="Contraseña"
             />
           </FormControl>
+          <FormControl fullWidth margin="normal" variant="outlined" sx={textFieldStyles}>
+            <InputLabel htmlFor="outlined-adornment-password">Repite la Contraseña</InputLabel>
+            <OutlinedInput
+              id="outlined-adornment-password"
+              type={showPassword ? 'text' : 'password'}
+              endAdornment={
+                <InputAdornment position="end">
+                  <IconButton
+                    aria-label="toggle password visibility"
+                    onClick={handleClickShowPassword}
+                    onMouseDown={handleMouseDownPassword}
+                    edge="end"
+                  >
+                    {showPassword ? <VisibilityOff /> : <Visibility />}
+                  </IconButton>
+                </InputAdornment>
+              }
+              label="Repite la Contraseña"
+            />
+          </FormControl>
           <Button
             type="submit"
             variant="contained"
@@ -89,7 +130,7 @@ function Login() {
               paddingTop: "10px",
             }}
           >
-            Iniciar Sesion
+            Registrarse
           </Button>
         </div>
       </div>
@@ -97,4 +138,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default SingUp;
