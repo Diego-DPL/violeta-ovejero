@@ -27,7 +27,7 @@ function Eventos() {
   return (
     <div className="eventos h-full bg-bg1">
       <div className='grid grid-cols-1 gap-4 mb-20'>
-        <h1 className='text-4xl text-white font-serif font-bold tracking-tightCustom text-center mt-[2%]'>
+        <h1 className='text-4xl text-brand2 font-serif font-bold tracking-tightCustom text-center mt-[2%]'>
           Estos son nuestros proximos eventos
         </h1>
         {eventos.map((evento, index) => (

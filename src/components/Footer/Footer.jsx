@@ -7,7 +7,7 @@ import XIcon from '@mui/icons-material/X';
 
 const Footer = () => {
   return (
-    <div className='footer flex flex-col bottom-0 w-full bg-white z-20'>
+    <div className='footer flex flex-col bottom-0 w-full bg-brand2 z-20'>
 
       <div className='topfooter flex flex-row justify-between items-center ml-16 mr-16'>
         <Logo cssClass="logoFooter font-bold text-[20px] no-underline text-brand1"/>

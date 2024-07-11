@@ -1,5 +1,5 @@
 .loginContainer{
-    color: white;
+    color: #FCFFE3;
     white-space: nowrap;
     display: flex;
     flex-direction: row;
@@ -13,7 +13,7 @@
 
 .singUpLink, .loginLink{
     text-decoration: none;
-    color: white;
+    color: #FCFFE3;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -24,7 +24,7 @@
 
 
 .singUpContainer{
-    border: 2px solid white;
+    border: 2px solid #FCFFE3;
     border-radius: 100px;
     width: 150px;
     height: 40px;

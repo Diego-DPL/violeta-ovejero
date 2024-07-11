@@ -10,7 +10,7 @@
 
 .opcion {
     white-space: nowrap;
-    color: white;
+    color: #FCFFE3;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
     text-decoration: none;

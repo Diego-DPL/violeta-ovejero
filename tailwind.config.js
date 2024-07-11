@@ -7,12 +7,13 @@ module.exports = {
 			bg1: '#106579',
 			bg2: '#FFFFFF',
 			brand1: '#393939',
-			brand2: '#106579',
+			brand2: '#FCFFE3',
 			grey1: '#43454D',
 			negro1: '#1A1E23',
 			customBorder: '#408494',
 			customPurple: '#1E0E62',
 			customGray: '#D2D1D9',
+
 		},
 		fontFamily: {
 			sans: ['sans-serif'],

@@ -30,16 +30,16 @@ function Home() {
           transition={{ duration: 0.5 }}
         >
           <div className="columUno flex-1 text-center p-2">
-            <h1 className="tituloHome text-customPurple text-custom58 font-serif font-bold tracking-tightCustom text-left align-top w-[90%] mt-[40%] ml-[10%] leading-custom70">
+            <h1 className="tituloHome text-bg1 text-custom58 font-serif font-bold tracking-tightCustom text-left align-top w-[90%] mt-[40%] ml-[10%] leading-custom70">
               Tu bienestar emocional es nuestra prioridad
             </h1>
-            <h2 className="descripcionHome leading-custom32 text-custom22 text-customGray text-left align-top w-full mt-[5%] ml-[10%]">
+            <h2 className="descripcionHome leading-custom32 text-custom22 text-bg1 text-left align-top w-full mt-[5%] ml-[10%]">
               Ofrecemos servicios de psicología personalizados. Nuestro equipo
               te ayuda a superar desafíos emocionales y mejorar tu bienestar
               mental.
             </h2>
             <div className="contratarContainer border-2 border-bg1 bg-bg1 rounded-full w-[300px] h-[50px] flex items-center justify-center mt-[10%] ml-[10%]">
-              <p className="contratar m-1 font-bold text-white transition-colors duration-300 ease-in-out">Contrata tu sesion</p>
+              <p className="contratar m-1 font-bold text-brand2 transition-colors duration-300 ease-in-out">Contrata tu sesion</p>
             </div>
           </div>
           <div className="columDos flex-1 text-center p-2">
@@ -65,12 +65,12 @@ function Home() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.4 }}
         >
-          <h1 className="tituloScroll1 text-white text-custom58 font-serif font-bold tracking-wideCustom text-left align-top mb-10 w-[90%] leading-custom70">Especialista en:</h1>
+          <h1 className="tituloScroll1 text-brand2 text-custom58 font-serif font-bold tracking-wideCustom text-left align-top mb-10 w-[90%] leading-custom70">Especialista en:</h1>
           <div className="grid grid-cols-2">
             <div>
-              <h2 className="subtituloScroll1 text-white text-custom38 font-serif tracking-wideCustom text-left align-top w-[90%] leading-custom40">- Trastornos de la Personalidad. </h2>
-              <h2 className="subtituloScroll1 text-white text-custom38 font-serif tracking-wideCustom text-left align-top w-[90%] leading-custom40">- Psicologia perinatal. </h2>
-              <h2 className="subtituloScroll1  text-white text-custom38 font-serif tracking-wideCustom text-left align-top w-[90%] leading-custom40">- Trastornos de la Conducta alimentaria.</h2>
+              <h2 className="subtituloScroll1 text-brand2 text-custom38 font-serif tracking-wideCustom text-left align-top w-[90%] leading-custom40">- Trastornos de la Personalidad. </h2>
+              <h2 className="subtituloScroll1 text-brand2 text-custom38 font-serif tracking-wideCustom text-left align-top w-[90%] leading-custom40">- Psicologia perinatal. </h2>
+              <h2 className="subtituloScroll1  text-brand2 text-custom38 font-serif tracking-wideCustom text-left align-top w-[90%] leading-custom40">- Trastornos de la Conducta alimentaria.</h2>
             </div>
             <div>
               <img className='w-[40%] h-auto flex items-center justify-center' src={process.env.PUBLIC_URL + 'assets/transtornos-de-la-personalidad.jpg'} alt="Especialidades"/>
@@ -86,10 +86,10 @@ function Home() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.4 }}
         >
-          <h1 className="tituloScroll1 text-white text-custom58 font-serif font-bold tracking-wideCustom text-left align-top mb-10 w-[90%] leading-custom70" >Transtornos de la personalidaad:</h1>
+          <h1 className="tituloScroll1 text-brand2 text-custom58 font-serif font-bold tracking-wideCustom text-left align-top mb-10 w-[90%] leading-custom70" >Transtornos de la personalidaad:</h1>
           <div className="grid grid-cols-2 flex items-center justify-center">
             <div>
-              <h2 className="subtituloScroll1 text-white text-custom38 font-serif tracking-wideCustom text-left align-top w-[90%] leading-custom40">
+              <h2 className="subtituloScroll1 text-brand2 text-custom38 font-serif tracking-wideCustom text-left align-top w-[90%] leading-custom40">
               Los trastornos de la personalidad son 
               formas de pensar y actuar que son muy diferentes de lo habitual.
               Estas diferencias pueden hacer que a las personas les resulte difícil 
@@ -109,10 +109,10 @@ function Home() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.4 }}
         >
-          <h1 className="tituloScroll1 text-white text-custom58 font-serif font-bold tracking-wideCustom text-left align-top mb-10 w-[90%] leading-custom70">Psicologia Perinatal:</h1>
+          <h1 className="tituloScroll1 text-brand2 text-custom58 font-serif font-bold tracking-wideCustom text-left align-top mb-10 w-[90%] leading-custom70">Psicologia Perinatal:</h1>
           <div className="grid grid-cols-2 flex items-center justify-center">
             <div>
-              <h2 className="subtituloScroll1 text-white text-custom38 font-serif tracking-wideCustom text-left align-top w-[90%] leading-custom40">La psicología perinatal se enfoca en el bienestar emocional 
+              <h2 className="subtituloScroll1 text-brand2 text-custom38 font-serif tracking-wideCustom text-left align-top w-[90%] leading-custom40">La psicología perinatal se enfoca en el bienestar emocional 
               de las madres y sus bebés durante el embarazo y después del parto.
               Ayuda a las madres a manejar el estrés, la ansiedad y otros sentimientos 
               para asegurar una experiencia positiva y saludable para ambos.</h2>
@@ -131,10 +131,10 @@ function Home() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.4 }}
         >
-          <h1 className="tituloScroll1 text-white text-custom58 font-serif font-bold tracking-wideCustom text-left align-top mb-10 w-[90%] leading-custom70">Transtornos de la Conducta Alimenticia:</h1>
+          <h1 className="tituloScroll1 text-brand2 text-custom58 font-serif font-bold tracking-wideCustom text-left align-top mb-10 w-[90%] leading-custom70">Transtornos de la Conducta Alimenticia:</h1>
           <div className="grid grid-cols-2 flex items-center justify-center">
             <div>
-              <h2 className="subtituloScroll1 text-white text-custom38 font-serif tracking-wideCustom text-left align-top w-[90%] leading-custom40">Los trastornos de la conducta alimentaria son problemas graves relacionados con la comida. 
+              <h2 className="subtituloScroll1 text-brand2 text-custom38 font-serif tracking-wideCustom text-left align-top w-[90%] leading-custom40">Los trastornos de la conducta alimentaria son problemas graves relacionados con la comida. 
               Las personas con estos trastornos pueden comer muy poco o en exceso,
               Ayuda a las madres a manejar el estrés, la ansiedad y otros sentimientos
               afectando su salud física y emocional.</h2>

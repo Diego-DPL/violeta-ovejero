@@ -22,7 +22,7 @@ function Contact({ servicios }) {
 
   const textFieldStyles = {
     "& label": {
-        color: "white",
+        color: "#FCFFE3",
       },
     "& .MuiOutlinedInput-root": {
       "& fieldset": {
@@ -31,20 +31,20 @@ function Contact({ servicios }) {
         borderWidth: "2px",
       },
       "&:hover fieldset": {
-        borderColor: "white",
+        borderColor: "#FCFFE3",
       },
       "&.Mui-focused fieldset": {
         borderColor: "#408494",
       },
       "& .MuiOutlinedInput-input": {
-        color: "white",
+        color: "#FCFFE3",
       },
     },
   };
 
   return (
     <div className="contactContainer bg-bg1 h-[80vh] flex flex-col items-center justify-center overflow-hidden">
-      <h4 className="contact-title text-white text-custom42 font-sans text-center align-top leading-custom52 font-bold tracking-tightCustom">Contacta conmigo</h4>
+      <h4 className="contact-title text-brand2 text-custom42 font-sans text-center align-top leading-custom52 font-bold tracking-tightCustom">Contacta conmigo</h4>
       <form onSubmit={handleSubmit} className="contactFormulario w-[60%]">
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
@@ -104,8 +104,8 @@ function Contact({ servicios }) {
             />
           </Grid>
           <Grid item xs={12} sm={8} style={{ textAlign: "center" }}>
-            <div className="contactWhatssap border-2 border-customBorder hover:border-white rounded-lg flex flex-row justify-center items-center gap-[10px]">
-              <p className="contactMensajeWhatssap text-white">
+            <div className="contactWhatssap border-2 border-customBorder hover:border-brand2 rounded-lg flex flex-row justify-center items-center gap-[10px]">
+              <p className="contactMensajeWhatssap text-brand2">
                 Si lo deseas, ponte en contacto conmigo vía whatssap
               </p>
               <IconButton
@@ -125,7 +125,8 @@ function Contact({ servicios }) {
               fullWidth
               style={{
                 marginTop: "5px",
-                backgroundColor: "#E93A7D",
+                color:"#106579",
+                backgroundColor: "#FCFFE3",
                 borderRadius: "40px",
                 paddingBottom: "10px",
                 paddingTop: "10px",

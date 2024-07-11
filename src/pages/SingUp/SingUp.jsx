@@ -14,7 +14,7 @@ function SingUp() {
 
   const textFieldStyles = {
     "& label": {
-      color: "white",
+      color: "#FCFFE3",
     },
     "& .MuiOutlinedInput-root": {
       "& fieldset": {
@@ -23,13 +23,13 @@ function SingUp() {
         borderWidth: "2px",
       },
       "&:hover fieldset": {
-        borderColor: "white",
+        borderColor: "#FCFFE3",
       },
       "&.Mui-focused fieldset": {
         borderColor: "#408494",
       },
       "& .MuiOutlinedInput-input": {
-        color: "white",
+        color: "#FCFFE3",
       },
     },
   };
@@ -38,15 +38,15 @@ function SingUp() {
     <>
       <div className="loggin grid grid-cols-2 h-[82vh] bg-bg1">
         <div>
-          <h1 className="text-4xl text-white font-serif font-bold tracking-tightCustom text-left align-top w-[90%] mt-[20%] ml-[10%] leading-custom70">
+          <h1 className="text-4xl text-brand2 font-serif font-bold tracking-tightCustom text-left align-top w-[90%] mt-[20%] ml-[10%] leading-custom70">
             Nos preocupamos por tu salud mental
           </h1>
-          <h2 className="text-custom30 text-customGray text-left align-top w-2/3 mt-[2%] ml-[10%]">
+          <h2 className="text-custom30 text-brand2 text-left align-top w-2/3 mt-[2%] ml-[10%]">
             Ofrecemos servicios de psicología personalizados. Nuestro equipo te ayuda a superar desafíos emocionales y mejorar tu bienestar mental.
           </h2>
         </div>
         <div className="loginSpace ml-[20%] mt-[5%] w-1/2">
-          <h1 className="text-4xl text-white font-serif font-bold tracking-tightCustom text-center align-top w-[90%] leading-custom70">
+          <h1 className="text-4xl text-brand2 font-serif font-bold tracking-tightCustom text-center align-top w-[90%] leading-custom70">
             Registrarte
           </h1>
           <TextField
@@ -124,7 +124,8 @@ function SingUp() {
             fullWidth
             style={{
               marginTop: "5px",
-              backgroundColor: "#E93A7D",
+              color: "#106579",
+              backgroundColor: "#FCFFE3",
               borderRadius: "40px",
               paddingBottom: "10px",
               paddingTop: "10px",
