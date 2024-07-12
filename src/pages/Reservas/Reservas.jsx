@@ -20,8 +20,8 @@ const localizer = dateFnsLocalizer({
   locales,
 });
 
-const clientId = '267875082674-475g2dv2qnbof94rgl7uv3rl2fgunt4j.apps.googleusercontent.com';
-const apiKey = 'AIzaSyAS_mvoAXfH72mldCdVCnkC2GKeiXJOyoU';
+const clientId = '';
+const apiKey = '';
 const discoveryDocs = ['https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest'];
 const scope = 'https://www.googleapis.com/auth/calendar.events.readonly';
 
