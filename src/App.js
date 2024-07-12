@@ -11,6 +11,7 @@ import Services from './pages/Servicios/Services';
 import Eventos from './pages/Eventos/Eventos';
 import Login from './pages/Login/Login';
 import SingUp from './pages/SingUp/SingUp';
+import Reservas from './pages/Reservas/Reservas';
 
 function App() {
 
@@ -53,6 +54,7 @@ function App() {
           <Route path="/eventos" element={<Eventos />} />
           <Route path="/login" element={<Login />} />
           <Route path="/singUp" element={<SingUp />} />
+          <Route path="/reservas" element={<Reservas />} />
         </Routes>
       {/* </Container> */}
       <Footer />

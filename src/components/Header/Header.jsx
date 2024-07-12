@@ -19,8 +19,8 @@ const Header = () => {
     "To":"contact"
   },
   {
-    "Name":"Servicios",
-    "To":"services"
+    "Name":"Reservas",
+    "To":"reservas"
   },
   {
     "Name":"Eventos",
