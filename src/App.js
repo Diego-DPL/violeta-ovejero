@@ -12,6 +12,7 @@ import Eventos from './pages/Eventos/Eventos';
 import Login from './pages/Login/Login';
 import SingUp from './pages/SingUp/SingUp';
 import Reservas from './pages/Reservas/Reservas';
+import Payment from './pages/Payment';
 
 function App() {
 
@@ -39,25 +40,26 @@ function App() {
   }
 ];
 
-
   return (
     <>
-    <div className='app'> 
-      <Header />
-      {/* <Container component="main" sx={{ flexGrow: 1, mt: 4 }}> */}
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/prices" element={<Prices servicios={servicios}/>} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact servicios={servicios}/>} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/eventos" element={<Eventos />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/singUp" element={<SingUp />} />
-          <Route path="/reservas" element={<Reservas />} />
-        </Routes>
-      {/* </Container> */}
-      <Footer />
+      <div className='app'> 
+        <Header />
+        {/* <Container component="main" sx={{ flexGrow: 1, mt: 4 }}> */}
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/prices" element={<Prices servicios={servicios}/>} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact servicios={servicios}/>} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/eventos" element={<Eventos />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/singUp" element={<SingUp />} />
+            <Route path="/reservas" element={<Reservas />} />
+            <Route path="/pago" element={<Payment />} />
+            <Route path="/confirmacion" element={<div>¡Reserva confirmada!</div>} />
+          </Routes>
+        {/* </Container> */}
+        <Footer />
       </div>
     </>
   );
