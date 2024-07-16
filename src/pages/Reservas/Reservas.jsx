@@ -20,8 +20,8 @@ const localizer = dateFnsLocalizer({
   locales,
 });
 
-const apiKey = '';
-const calendarId = '';
+const apiKey = 'AIzaSyAS_mvoAXfH72mldCdVCnkC2GKeiXJOyoU';
+const calendarId = 'dpl.official.dj@gmail.com';
 
 const Reservas = () => {
   const [events, setEvents] = useState([]);
@@ -36,23 +36,88 @@ const Reservas = () => {
     fetch(`https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events?key=${apiKey}`)
       .then(response => response.json())
       .then(data => {
-        const items = data.items.map(item => ({
+        const googleEvents = data.items.map(item => ({
           title: item.summary,
           start: new Date(item.start.dateTime || item.start.date),
           end: new Date(item.end.dateTime || item.end.date),
           allDay: !item.start.dateTime,
+          color: 'red',
+          isGoogleEvent: true,
         }));
 
-        // Añadir slot específico para el jueves 16 de julio a las 12 PM
-        const specificSlot = {
-          title: 'Disponible',
-          start: new Date('2024-07-16T12:00:00'),
-          end: new Date('2024-07-16T13:00:00'),
-          allDay: false,
-        };
+        // Añadir slots específicos
+        const customSlots = generateCustomSlots();
 
-        setEvents([...items, specificSlot]);
+        // Filtrar los slots que se superponen con los eventos de Google
+        const availableSlots = customSlots.filter(slot => {
+          return !googleEvents.some(event => 
+            (slot.start < event.end && slot.end > event.start)
+          );
+        });
+
+        setEvents([...googleEvents, ...availableSlots]);
       });
+  };
+
+  const generateCustomSlots = () => {
+    const slots = [];
+    const now = new Date();
+    const startDate = new Date(now.getTime() + 24 * 60 * 60 * 1000); // Añadir 24 horas a la fecha actual
+    startDate.setHours(0, 0, 0, 0); // Ajustar a las 00:00 horas
+
+    for (let day = 0; day < 5; day++) { // De lunes a viernes
+      // Generar slots de 9 AM a 2 PM
+      let hour = 9;
+      while (hour < 14) {
+        const startSlot = new Date(startDate);
+        startSlot.setDate(startDate.getDate() + day);
+        startSlot.setHours(hour, hour % 1 * 60, 0, 0);
+
+        const endSlot = new Date(startSlot);
+        endSlot.setHours(startSlot.getHours() + 1, startSlot.getMinutes());
+
+        if (startSlot > now) { // Solo añadir slots después de las próximas 24 horas
+          slots.push({
+            title: 'Disponible',
+            start: startSlot,
+            end: endSlot,
+            allDay: false,
+            color: 'green',
+            isGoogleEvent: false,
+          });
+        }
+
+        // Añadir 5 minutos de intervalo
+        hour += 1.0833; // 1 hora y 5 minutos (1 + 5/60)
+      }
+
+      // Generar slots de 4 PM a 9 PM
+      hour = 16;
+      while (hour < 21) {
+        const startSlot = new Date(startDate);
+        startSlot.setDate(startDate.getDate() + day);
+        startSlot.setHours(hour, hour % 1 * 60, 0, 0);
+
+        const endSlot = new Date(startSlot);
+        endSlot.setHours(startSlot.getHours() + 1, startSlot.getMinutes());
+
+        if (startSlot > now) { // Solo añadir slots después de las próximas 24 horas
+          slots.push({
+            title: 'Disponible',
+            start: startSlot,
+            end: endSlot,
+            allDay: false,
+            color: 'green',
+            isGoogleEvent: false,
+          });
+        }
+
+        // Añadir 5 minutos de intervalo
+        hour += 1.0833; // 1 hora y 5 minutos (1 + 5/60)
+      }
+    }
+
+    return slots;
   };
 
   const handleSelectSlot = ({ start, end }) => {
@@ -62,8 +127,15 @@ const Reservas = () => {
   };
 
   const handleSelectEvent = (event) => {
-    // Redirigir a la página de pago y pasar los datos del evento
-    navigate(`/pago?start=${event.start.toISOString()}&end=${event.end.toISOString()}&title=${encodeURIComponent(event.title)}`);
+    if (!event.isGoogleEvent) {
+      // Redirigir a la página de pago y pasar los datos del evento
+      navigate(`/pago?start=${event.start.toISOString()}&end=${event.end.toISOString()}&title=${encodeURIComponent(event.title)}`);
+    }
+  };
+
+  const eventPropGetter = (event) => {
+    const backgroundColor = event.color;
+    return { style: { backgroundColor } };
   };
 
   return (
@@ -83,6 +155,7 @@ const Reservas = () => {
         onSelectSlot={handleSelectSlot}
         onSelectEvent={handleSelectEvent} // Manejador para cuando se selecciona un evento
         onView={(newView) => setView(newView)} // Manejador para cambiar la vista
+        eventPropGetter={eventPropGetter} // Establecer el color de fondo de los eventos
       />
     </div>
   );
