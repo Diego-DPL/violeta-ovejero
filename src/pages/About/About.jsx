@@ -3,7 +3,7 @@ import "./About.css";
 
 function About() {
   return (
-    <div className="about-container">
+    <div className="aboutContainer flex bg-bg1 h-[80vh] ">
       <div>
         <h1>Somos Especialistas en:</h1>
         <p>
