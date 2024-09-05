@@ -17,6 +17,7 @@ const Header = () => {
   return (
     <header className="bg-bg1 w-full top-0 sticky z-20 flex justify-between items-center p-4 md:p-6">
       <Logo />
+      {/* Botón de Menú Hamburguesa para Móviles */}
       <button
         className="md:hidden text-[#FCFFE3] focus:outline-none"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -28,9 +29,10 @@ const Header = () => {
         </svg>
       </button>
       {/* Menú Responsive */}
-      <nav className={`absolute top-[8vh] left-0 right-0 bg-bg1 p-4 md:p-0 md:relative md:flex ${isMenuOpen ? 'flex' : 'hidden'} flex-col md:flex-row md:items-center md:gap-8`}>
+      <nav
+        className={`md:flex md:items-center md:gap-8 absolute md:static top-[8vh] left-0 right-0 bg-bg1 p-4 md:p-0 ${isMenuOpen ? 'flex flex-col' : 'hidden'}`}
+      >
         <Menu opciones={opciones} />
-        {/* Opciones de Login también visibles en el menú móvil */}
         <LoginMenu />
       </nav>
     </header>
@@ -38,3 +40,4 @@ const Header = () => {
 };
 
 export default Header;
+
