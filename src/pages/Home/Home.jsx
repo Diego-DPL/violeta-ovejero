@@ -27,13 +27,13 @@ function Home() {
           {/* Columna Uno */}
           <div className="columUno flex-1 text-center p-2">
             <h1 className="tituloHome text-bg1 text-4xl md:text-custom58 font-serif font-bold tracking-tightCustom text-left mt-8 md:mt-[40%] ml-0 md:ml-[10%] leading-custom70">
-              Tu bienestar emocional es nuestra prioridad
+              Tu bienestar emocional es mi prioridad
             </h1>
             <h2 className="descripcionHome leading-custom32 text-custom22 text-bg1 text-left mt-4 md:mt-[5%] ml-0 md:ml-[10%]">
-              Ofrecemos servicios de psicología personalizados. Nuestro equipo te ayuda a superar desafíos emocionales y mejorar tu bienestar mental.
+              Servicios de psicología personalizados. Te ayudaré a superar desafíos emocionales y mejorar tu salud mental.
             </h2>
             <div className="contratarContainer border-2 border-bg1 bg-bg1 rounded-full w-[250px] md:w-[300px] h-[50px] flex items-center justify-center mt-4 md:mt-[10%] ml-0 md:ml-[10%]">
-              <p className="contratar m-1 font-bold text-brand2 transition-colors duration-300 ease-in-out">Contrata tu sesion</p>
+              <p className="contratar m-1 font-bold text-brand2 transition-colors duration-300 ease-in-out">Agenda tu sesion</p>
             </div>
           </div>
 
