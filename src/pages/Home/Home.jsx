@@ -26,7 +26,7 @@ function Home() {
         >
           {/* Columna Uno */}
           <div className="columUno flex-1 text-center p-2">
-            <h1 className="tituloHome text-bg1 text-4xl md:text-custom58 font-serif font-bold tracking-tightCustom text-left mt-8 md:mt-[40%] ml-0 md:ml-[10%] leading-custom70">
+            <h1 className="tituloHome text-bg1 text-4xl md:text-custom58 font-serif font-bold tracking-tightCustom text-left mt-8 md:mt-[40%] ml-0 md:ml-[10%] leading-custom40 md:leading-custom70">
               Tu bienestar emocional es mi prioridad
             </h1>
             <h2 className="descripcionHome leading-custom32 text-custom22 text-bg1 text-left mt-4 md:mt-[5%] ml-0 md:ml-[10%]">
@@ -62,7 +62,7 @@ function Home() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.4 }}
         >
-          <h1 className="tituloScroll1 text-brand2 text-5xl md:text-custom58 font-serif font-bold tracking-wideCustom text-left mb-6 w-[90%] leading-custom70">
+          <h1 className="tituloScroll1 text-brand2 text-5xl md:text-custom58 font-serif font-bold tracking-wideCustom text-left mb-8 w-[90%] leading-custom52 md:leading-custom70">
             Especialista en:
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -91,7 +91,7 @@ function Home() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.4 }}
         >
-          <h1 className="tituloScroll1 text-brand2 text-5xl md:text-custom58 font-serif font-bold tracking-wideCustom text-left align-top mb-10 w-[90%] leading-custom70" >Transtornos de la personalidad:</h1>
+          <h1 className="tituloScroll1 text-brand2 text-5xl md:text-custom58 font-serif font-bold tracking-wideCustom text-left align-top mb-10 w-[90%] leading-custom52 md:leading-custom70" >Transtornos de la personalidad:</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 flex items-center justify-center">
             <div>
               <h2 className="subtituloScroll1 text-brand2 text-custom38 font-serif tracking-wideCustom text-left align-top w-[90%] leading-custom40">
@@ -113,7 +113,7 @@ function Home() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.4 }}
         >
-          <h1 className="tituloScroll1 text-brand2 text-5xl md:text-custom58 font-serif font-bold tracking-wideCustom text-left align-top mb-10 w-[90%] leading-custom70">Psicologia Perinatal:</h1>
+          <h1 className="tituloScroll1 text-brand2 text-5xl md:text-custom58 font-serif font-bold tracking-wideCustom text-left align-top mb-10 w-[90%] leading-custom52 md:leading-custom70">Psicologia Perinatal:</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 flex items-center justify-center">
             <div>
               <h2 className="subtituloScroll1 text-brand2 text-custom38 font-serif tracking-wideCustom text-left align-top w-[90%] leading-custom40">
@@ -134,7 +134,7 @@ function Home() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.4 }}
         >
-          <h1 className="tituloScroll1 text-brand2 text-5xl md:text-custom58 font-serif font-bold tracking-wideCustom text-left align-top mb-10 w-[90%] leading-custom70">Transtornos de la Conducta Alimenticia:</h1>
+          <h1 className="tituloScroll1 text-brand2 text-5xl md:text-custom58 font-serif font-bold tracking-wideCustom text-left align-top mb-10 w-[90%] leading-custom52 md:leading-custom70">Transtornos de la Conducta Alimenticia:</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 flex items-center justify-center">
             <div>
               <h2 className="subtituloScroll1 text-brand2 text-custom38 font-serif tracking-wideCustom text-left align-top w-[90%] leading-custom40">
