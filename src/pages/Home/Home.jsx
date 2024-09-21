@@ -33,7 +33,7 @@ function Home() {
               Servicios de psicología personalizados. Te ayudaré a superar desafíos emocionales y mejorar tu salud mental.
             </h2>
             <div className="contratarContainer border-2 border-bg1 bg-bg1 rounded-full w-[250px] md:w-[300px] h-[50px] flex items-center justify-center mt-4 md:mt-[10%] ml-0 md:ml-[10%]">
-              <p className="contratar m-1 font-bold text-brand2 transition-colors duration-300 ease-in-out">Agenda tu sesion</p>
+              <p className="contratar m-1 font-bold text-brand2 transition-colors duration-300 ease-in-out">Agenda tu sesión</p>
             </div>
           </div>
 
@@ -54,97 +54,80 @@ function Home() {
         </motion.div>
       </Container>
 
-      {/* Secciones Responsivas */}
-      <motion.div className="scrolServicios mt-[100vh] h-auto bg-bg1 z-10">
+      {/* Sección de Especialidades */}
+      <motion.div className="scrolServicios mt-[100vh] h-[100vh] bg-bg1 z-10">
         <motion.div
-          className="serviciosTitulos ml-4 md:ml-[20%] mt-[20vh]"
+          className="serviciosTitulos mx-4 md:mx-[10%] mt-[20vh]"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.4 }}
         >
-          <h1 className="tituloScroll1 text-brand2 text-5xl md:text-custom58 font-serif font-bold tracking-wideCustom text-left mb-8 w-[90%] leading-custom52 md:leading-custom70">
+          <h1 className="tituloScroll1 text-brand2 text-5xl md:text-custom58 font-serif font-bold tracking-wideCustom text-left mb-8 leading-custom52 md:leading-custom70">
             Especialista en:
           </h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <h2 className="subtituloScroll1 text-brand2 text-custom38 font-serif tracking-wideCustom text-left leading-custom40">
-                - Trastornos de la Personalidad.
-              </h2>
-              <h2 className="subtituloScroll1 text-brand2 text-custom38 font-serif tracking-wideCustom text-left leading-custom40">
-                - Psicología perinatal.
-              </h2>
-              <h2 className="subtituloScroll1 text-brand2 text-custom38 font-serif tracking-wideCustom text-left leading-custom40">
-                - Trastornos de la Conducta alimentaria.
-              </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+            {/* Cuadrado 1 */}
+            <div className="especialidad-box bg-brand2 relative flex items-center justify-center text-center rounded-lg shadow-md overflow-hidden">
+              <img
+                className="w-full h-full object-cover opacity-70"
+                src={process.env.PUBLIC_URL + 'assets/transtornos-de-la-personalidad.jpg'}
+                alt="Trastornos de la Personalidad"
+              />
+              <h2 className="text-brand2 text-xl font-bold absolute">Trastornos de la Personalidad</h2>
+              <div className="overlay opacity-0 hover:opacity-100 absolute inset-0 bg-bg1 bg-opacity-80 flex flex-col items-center justify-center text-brand2 transition-opacity duration-300">
+                <p className="description px-4 mb-4 text-center">
+                  Los trastornos de la personalidad son formas de pensar y actuar que causan dificultades en la vida y las relaciones con los demás.
+                </p>
+                <button className="btn-saber-mas bg-brand2 text-bg1 py-2 px-4 rounded">Saber más</button>
+              </div>
             </div>
-            <div className="flex items-center justify-center">
-              <img className="w-[60%] md:w-[40%] h-auto" src={process.env.PUBLIC_URL + 'assets/transtornos-de-la-personalidad.jpg'} alt="Especialidades" />
+            {/* Cuadrado 2 */}
+            <div className="especialidad-box bg-brand2 relative flex items-center justify-center text-center rounded-lg shadow-md overflow-hidden">
+              <img
+                className="w-full h-full object-cover opacity-70"
+                src={process.env.PUBLIC_URL + 'assets/transtornos-de-la-personalidad.jpg'}
+                alt="Psicología Perinatal"
+              />
+              <h2 className="text-brand2 text-xl font-bold absolute">Psicología Perinatal</h2>
+              <div className="overlay opacity-0 hover:opacity-100 absolute inset-0 bg-bg1 bg-opacity-80 flex flex-col items-center justify-center text-brand2 transition-opacity duration-300">
+                <p className="description px-4 mb-4 text-center">
+                  La psicología perinatal es el estudio del bienestar emocional de la madre y el bebé durante el embarazo y después del nacimiento.
+                </p>
+                <button className="btn-saber-mas bg-brand2 text-bg1 py-2 px-4 rounded">Saber más</button>
+              </div>
+            </div>
+            {/* Cuadrado 3 */}
+            <div className="especialidad-box bg-brand2 relative flex items-center justify-center text-center rounded-lg shadow-md overflow-hidden">
+              <img
+                className="w-full h-full object-cover opacity-70"
+                src={process.env.PUBLIC_URL + 'assets/transtornos-de-la-personalidad.jpg'}
+                alt="Trastornos de la Conducta Alimentaria"
+              />
+              
+              <h2 className="text-brand2 text-xl font-bold absolute">Trastornos de la Conducta Alimentaria</h2>
+              <div className="overlay opacity-0 hover:opacity-100 absolute inset-0 bg-bg1 bg-opacity-80 flex flex-col items-center justify-center text-brand2 transition-opacity duration-300">
+                <p className="description px-4 mb-4 text-center">
+                  Problemas graves relacionados con la forma en que una persona come y se siente con su cuerpo.
+                </p>
+                <button className="btn-saber-mas bg-brand2 text-bg1 py-2 px-4 rounded">Saber más</button>
+              </div>
+            </div>
+            {/* Cuadrado 4 */}
+            <div className="especialidad-box bg-brand2 relative flex items-center justify-center text-center rounded-lg shadow-md overflow-hidden">
+              <img
+                className="w-full h-full object-cover opacity-70"
+                src={process.env.PUBLIC_URL + 'assets/transtornos-de-la-personalidad.jpg'}
+                alt="Violencia de Género"
+              />
+              <h2 className="text-brand2 text-xl font-bold absolute">Violencia de Género</h2>
+              <div className="overlay opacity-0 hover:opacity-100 absolute inset-0 bg-bg1 bg-opacity-80 flex flex-col items-center justify-center text-brand2 transition-opacity duration-300">
+                <p className="description px-4 mb-4 text-center">
+                  Apoyo psicológico para víctimas de violencia de género, ayudando a superar traumas y recuperar el bienestar emocional.
+                </p>
+                <button className="btn-saber-mas bg-brand2 text-bg1 py-2 px-4 rounded">Saber más</button>
+              </div>
             </div>
           </div>
-        </motion.div>
-      </motion.div>
-
-      <motion.div className="scrolPersonalidad flex flex-col h-[100vh] bg-bg1 z-10">
-        <motion.div
-          className="serviciosTitulos ml-4 md:ml-[20%] mt-[20vh]"
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.4 }}
-        >
-          <h1 className="tituloScroll1 text-brand2 text-5xl md:text-custom58 font-serif font-bold tracking-wideCustom text-left align-top mb-10 w-[90%] leading-custom52 md:leading-custom70" >Transtornos de la personalidad:</h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 flex items-center justify-center">
-            <div>
-              <h2 className="subtituloScroll1 text-brand2 text-custom38 font-serif tracking-wideCustom text-left align-top w-[90%] leading-custom40">
-              Los trastornos de la personalidad son
-               formas de pensar y actuar que causan dificultades en la vida 
-               y las relaciones con los demás. </h2>
-            </div>
-            <div>
-              <img className='w-[60%] md:w-[40%] h-auto flex items-center justify-center' src={process.env.PUBLIC_URL + 'assets/transtornos-de-la-personalidad.jpg'} alt="Especialidades"/>
-            </div>
-          </div>
-        </motion.div>
-      </motion.div>
-
-      <motion.div className="scrolPerinatal flex flex-col h-[100vh] bg-bg1 z-10">
-        <motion.div
-          className="serviciosTitulos ml-4 md:ml-[20%] mt-[20vh]"
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.4 }}
-        >
-          <h1 className="tituloScroll1 text-brand2 text-5xl md:text-custom58 font-serif font-bold tracking-wideCustom text-left align-top mb-10 w-[90%] leading-custom52 md:leading-custom70">Psicologia Perinatal:</h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 flex items-center justify-center">
-            <div>
-              <h2 className="subtituloScroll1 text-brand2 text-custom38 font-serif tracking-wideCustom text-left align-top w-[90%] leading-custom40">
-              La psicología perinatal es el estudio del bienestar emocional de la madre y el bebé durante el embarazo y después del nacimiento.
-              </h2>
-            </div>
-            <div>
-              <img className='w-[60%] md:w-[40%] h-auto flex items-center justify-center' src={process.env.PUBLIC_URL + 'assets/transtornos-de-la-personalidad.jpg'} alt="Especialidades"/>
-            </div>
-          </div>          
-        </motion.div>
-      </motion.div>
-
-      <motion.div className="scrolTCA flex flex-col h-[100vh] bg-bg1 z-10">
-        <motion.div
-          className="serviciosTitulos ml-4 md:ml-[20%] mt-[20vh]"
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.4 }}
-        >
-          <h1 className="tituloScroll1 text-brand2 text-5xl md:text-custom58 font-serif font-bold tracking-wideCustom text-left align-top mb-10 w-[90%] leading-custom52 md:leading-custom70">Transtornos de la Conducta Alimenticia:</h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 flex items-center justify-center">
-            <div>
-              <h2 className="subtituloScroll1 text-brand2 text-custom38 font-serif tracking-wideCustom text-left align-top w-[90%] leading-custom40">
-              son problemas graves relacionados con la forma en que una persona come y se siente con su cuerpo.
-              </h2>
-            </div>
-            <div>
-              <img className='w-[60%] md:w-[40%] h-auto flex items-center justify-center' src={process.env.PUBLIC_URL + 'assets/transtornos-de-la-personalidad.jpg'} alt="Especialidades"/>
-            </div>
-          </div>          
         </motion.div>
       </motion.div>
     </>

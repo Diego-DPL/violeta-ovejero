@@ -7,10 +7,10 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const opciones = [
-    { Name: "Sobre Nosotros", To: "about" },
-    { Name: "Precios", To: "prices" },
+    { Name: "Sobre Mi", To: "about" },
+    // { Name: "Precios", To: "prices" },
     { Name: "Contacto", To: "contact" },
-    { Name: "Reservas", To: "reservas" },
+    // { Name: "Reservas", To: "reservas" },
     { Name: "Eventos", To: "eventos" }
   ];
 
@@ -33,7 +33,7 @@ const Header = () => {
         className={`md:flex md:items-center md:gap-8 absolute md:static top-[8vh] left-0 right-0 bg-bg1 p-4 md:p-0 ${isMenuOpen ? 'flex flex-col' : 'hidden'}`}
       >
         <Menu opciones={opciones} />
-        <LoginMenu />
+        {/* <LoginMenu /> */}
       </nav>
     </header>
   );
