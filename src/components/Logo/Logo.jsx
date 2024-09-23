@@ -7,7 +7,7 @@ function Logo() {
       className="text-[#FCFFE3] font-bold text-[20px] flex justify-center items-center no-underline"
       to="/"
     >
-      Violeta Ovejero
+      Violeta Ovejero Psicóloga
     </Link>
   );
 }

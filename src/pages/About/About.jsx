@@ -5,7 +5,7 @@ function About() {
     <div className="aboutContainer flex bg-bg1 ">
       <div>
         <h1 className="text-brand2 text-5xl md:text-custom58 font-serif font-bold tracking-wideCustom text-left align-top mb-10 ml-10 w-[90%] leading-custom70" >
-          Sobre Nosotros
+          Sobre Mi
         </h1>
         <h2 className="text-brand2 text-4xl md:text-custom42 font-serif tracking-wideCustom text-left align-top mb-10 ml-10 w-[90%] leading-custom52" >
           Tu espacio de bienestar emocional.

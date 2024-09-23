@@ -1,6 +1,8 @@
 import React from "react";
 import { Container } from "@mui/material";
 import { motion, useScroll, useMotionValueEvent, useMotionValue } from "framer-motion";
+import { LocationOn, Phone, ArrowForward, Email, WhatsApp} from '@mui/icons-material'; // Importar íconos
+import EspecialidadCard from '../../components/EspecialidadCard/EspecialidadCard'; // Asegúrate de que la ruta es correcta
 
 function Home() {
   const { scrollYProgress } = useScroll();
@@ -55,7 +57,7 @@ function Home() {
       </Container>
 
       {/* Sección de Especialidades */}
-      <motion.div className="scrolServicios mt-[100vh] h-[100vh] bg-bg1 z-10">
+      <motion.div className="scrolServicios mt-[100vh] md:h-[100vh] bg-bg1 z-10">
         <motion.div
           className="serviciosTitulos mx-4 md:mx-[10%] mt-[20vh]"
           initial={{ opacity: 0, scale: 0.9 }}
@@ -66,70 +68,116 @@ function Home() {
             Especialista en:
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-            {/* Cuadrado 1 */}
-            <div className="especialidad-box bg-brand2 relative flex items-center justify-center text-center rounded-lg shadow-md overflow-hidden">
-              <img
-                className="w-full h-full object-cover opacity-70"
-                src={process.env.PUBLIC_URL + 'assets/transtornos-de-la-personalidad.jpg'}
-                alt="Trastornos de la Personalidad"
-              />
-              <h2 className="text-brand2 text-xl font-bold absolute">Trastornos de la Personalidad</h2>
-              <div className="overlay opacity-0 hover:opacity-100 absolute inset-0 bg-bg1 bg-opacity-80 flex flex-col items-center justify-center text-brand2 transition-opacity duration-300">
-                <p className="description px-4 mb-4 text-center">
-                  Los trastornos de la personalidad son formas de pensar y actuar que causan dificultades en la vida y las relaciones con los demás.
-                </p>
-                <button className="btn-saber-mas bg-brand2 text-bg1 py-2 px-4 rounded">Saber más</button>
-              </div>
-            </div>
-            {/* Cuadrado 2 */}
-            <div className="especialidad-box bg-brand2 relative flex items-center justify-center text-center rounded-lg shadow-md overflow-hidden">
-              <img
-                className="w-full h-full object-cover opacity-70"
-                src={process.env.PUBLIC_URL + 'assets/transtornos-de-la-personalidad.jpg'}
-                alt="Psicología Perinatal"
-              />
-              <h2 className="text-brand2 text-xl font-bold absolute">Psicología Perinatal</h2>
-              <div className="overlay opacity-0 hover:opacity-100 absolute inset-0 bg-bg1 bg-opacity-80 flex flex-col items-center justify-center text-brand2 transition-opacity duration-300">
-                <p className="description px-4 mb-4 text-center">
-                  La psicología perinatal es el estudio del bienestar emocional de la madre y el bebé durante el embarazo y después del nacimiento.
-                </p>
-                <button className="btn-saber-mas bg-brand2 text-bg1 py-2 px-4 rounded">Saber más</button>
-              </div>
-            </div>
-            {/* Cuadrado 3 */}
-            <div className="especialidad-box bg-brand2 relative flex items-center justify-center text-center rounded-lg shadow-md overflow-hidden">
-              <img
-                className="w-full h-full object-cover opacity-70"
-                src={process.env.PUBLIC_URL + 'assets/transtornos-de-la-personalidad.jpg'}
-                alt="Trastornos de la Conducta Alimentaria"
-              />
-              
-              <h2 className="text-brand2 text-xl font-bold absolute">Trastornos de la Conducta Alimentaria</h2>
-              <div className="overlay opacity-0 hover:opacity-100 absolute inset-0 bg-bg1 bg-opacity-80 flex flex-col items-center justify-center text-brand2 transition-opacity duration-300">
-                <p className="description px-4 mb-4 text-center">
-                  Problemas graves relacionados con la forma en que una persona come y se siente con su cuerpo.
-                </p>
-                <button className="btn-saber-mas bg-brand2 text-bg1 py-2 px-4 rounded">Saber más</button>
-              </div>
-            </div>
-            {/* Cuadrado 4 */}
-            <div className="especialidad-box bg-brand2 relative flex items-center justify-center text-center rounded-lg shadow-md overflow-hidden">
-              <img
-                className="w-full h-full object-cover opacity-70"
-                src={process.env.PUBLIC_URL + 'assets/transtornos-de-la-personalidad.jpg'}
-                alt="Violencia de Género"
-              />
-              <h2 className="text-brand2 text-xl font-bold absolute">Violencia de Género</h2>
-              <div className="overlay opacity-0 hover:opacity-100 absolute inset-0 bg-bg1 bg-opacity-80 flex flex-col items-center justify-center text-brand2 transition-opacity duration-300">
-                <p className="description px-4 mb-4 text-center">
-                  Apoyo psicológico para víctimas de violencia de género, ayudando a superar traumas y recuperar el bienestar emocional.
-                </p>
-                <button className="btn-saber-mas bg-brand2 text-bg1 py-2 px-4 rounded">Saber más</button>
-              </div>
-            </div>
+            {/* Utilizamos el componente EspecialidadCard para cada especialidad */}
+            <EspecialidadCard
+              imagen="assets/transtornos-de-la-personalidad.jpg"
+              titulo="Trastornos de la Personalidad"
+              descripcion="Los trastornos de la personalidad son formas de pensar y actuar que causan dificultades en la vida y las relaciones con los demás."
+              enlace="/trastornos-de-la-personalidad"
+            />
+            <EspecialidadCard
+              imagen="assets/transtornos-de-la-personalidad.jpg"
+              titulo="Psicología Perinatal"
+              descripcion="La psicología perinatal es el estudio del bienestar emocional de la madre y el bebé durante el embarazo y después del nacimiento."
+              enlace="/psicologia-perinatal"
+            />
+            <EspecialidadCard
+              imagen="assets/transtornos-de-la-personalidad.jpg"
+              titulo="Trastornos de la Conducta Alimentaria"
+              descripcion="Problemas graves relacionados con la forma en que una persona come y se siente con su cuerpo."
+              enlace="/trastornos-de-la-conducta-alimentaria"
+            />
+            <EspecialidadCard
+              imagen="assets/transtornos-de-la-personalidad.jpg"
+              titulo="Violencia de Género"
+              descripcion="Apoyo psicológico para víctimas de violencia de género, ayudando a superar traumas y recuperar el bienestar emocional."
+              enlace="/violencia-de-genero"
+            />
           </div>
         </motion.div>
       </motion.div>
+
+      {/* Sección de Terapias */}
+      <motion.div className="terapias-section h-[100vh] bg-brand2 flex items-center justify-center">
+        <div className="flex flex-col md:flex-row items-stretch justify-center gap-8 w-full max-w-5xl">
+          {/* Tarjeta Presencial */}
+          <div className="tarjeta-terapia bg-bg1 text-brand2 p-8 rounded-xl shadow-[0_5px_20px_10px_rgba(0,0,0,0.4)] flex flex-col flex-1">
+            <h1 className="text-5xl font-bold mb-4 text-left">Presencial</h1>
+            <div className="mb-4 flex-grow">
+              <div className="flex items-center mb-2">
+                <LocationOn className="text-brand2 text-2xl mr-2" />
+                <p className="text-xl">Calle del Pensionista n2 1L</p>
+              </div>
+              <div className="flex items-center">
+                <Phone className="text-brand2 text-2xl mr-2" />
+                <p className="text-xl">Teléfono: 608008081</p>
+              </div>
+            </div>
+            <hr className="border-t border-brand2 mb-4" />
+            <div className="mt-auto">
+              <a
+                href="/reservar-cita-presencial"
+                className="btn-reservar bg-brand2 text-bg1 py-2 px-6 rounded-full shadow-md flex items-center justify-center hover:bg-brand2-dark transition duration-300"
+              >
+                Reservar cita <ArrowForward className="ml-2" />
+              </a>
+            </div>
+          </div>
+
+          {/* Tarjeta Online */}
+          <div className="tarjeta-terapia bg-bg1 text-brand2 p-8 rounded-xl shadow-[0_5px_20px_10px_rgba(0,0,0,0.4)] flex flex-col flex-1">
+            <h1 className="text-5xl font-bold mb-4 text-left">Online</h1>
+            <div className="mb-4 flex-grow">
+              <div className="flex items-center mb-2">
+                <Email className="text-brand2 text-2xl mr-2" />
+                <p className="text-xl">violetavejero@gmail.com</p>
+              </div>
+              <div className="flex items-center">
+                <Phone className="text-brand2 text-2xl mr-2" />
+                <p className="text-xl">Teléfono: 608008081</p>
+              </div>
+            </div>
+            <hr className="border-t border-brand2 mb-4" />
+            <div className="mt-auto">
+              <a
+                href="/reservar-cita-online"
+                className="btn-reservar bg-brand2 text-bg1 py-2 px-6 rounded-full shadow-md flex items-center justify-center hover:bg-brand2-dark transition duration-300"
+              >
+                Reservar cita <ArrowForward className="ml-2" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Sección de Contacto */}
+      <motion.div className="contacto-section h-auto bg-bg1 py-16">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Columna 1: Escríbeme */}
+            <div className="contacto-col flex flex-col items-center text-center">
+              <Email className="text-brand2 text-6xl mb-4" />
+              <h2 className="text-2xl font-bold text-brand2 mb-2">Escríbeme</h2>
+              <p className="text-brand2 mb-1">violetaovejero@gmail.com</p>
+              <p className="text-brand2">Contesto en 24 horas</p>
+            </div>
+            {/* Columna 2: Llámame */}
+            <div className="contacto-col flex flex-col items-center text-center">
+              <Phone className="text-brand2 text-6xl mb-4" />
+              <h2 className="text-2xl font-bold text-brand2 mb-2">Llámame</h2>
+              <p className="text-brand2 mb-1">608008081</p>
+              <p className="text-brand2">De lunes a viernes de 09:00 a 20:00</p>
+            </div>
+            {/* Columna 3: WhatsApp */}
+            <div className="contacto-col flex flex-col items-center text-center">
+              <WhatsApp className="text-brand2 text-6xl mb-4" />
+              <h2 className="text-2xl font-bold text-brand2 mb-2">WhatsApp</h2>
+              <p className="text-brand2 mb-1">608008081</p>
+              <p className="text-brand2">De lunes a viernes de 09:00 a 20:00</p>
+            </div>
+          </div>
+        </div>
+      </motion.div>      
     </>
   );
 }
