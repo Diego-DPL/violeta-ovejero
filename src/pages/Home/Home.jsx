@@ -1,8 +1,9 @@
 import React from "react";
 import { Container } from "@mui/material";
 import { motion, useScroll, useMotionValueEvent, useMotionValue } from "framer-motion";
-import { LocationOn, Phone, ArrowForward, Email, WhatsApp} from '@mui/icons-material'; // Importar íconos
-import EspecialidadCard from '../../components/EspecialidadCard/EspecialidadCard'; // Asegúrate de que la ruta es correcta
+import { LocationOn, Phone, ArrowForward, Email, WhatsApp } from '@mui/icons-material';
+import EspecialidadCard from '../../components/EspecialidadCard/EspecialidadCard';
+import { Link } from 'react-router-dom'; // Importamos Link para la navegación
 
 function Home() {
   const { scrollYProgress } = useScroll();
@@ -11,6 +12,12 @@ function Home() {
   useMotionValueEvent(scrollYProgress, "change", (value) => {
     scrollTop.set(((1 - value) * 1.95) - 0.9);
   });
+
+  const handleWhatsAppClick = () => {
+    const phoneNumber = "644451241"; 
+    const url = `https://wa.me/${phoneNumber}`;
+    window.open(url, "_blank");
+  };
 
   return (
     <>
@@ -35,7 +42,9 @@ function Home() {
               Servicios de psicología personalizados. Te ayudaré a superar desafíos emocionales y mejorar tu salud mental.
             </h2>
             <div className="contratarContainer border-2 border-bg1 bg-bg1 rounded-full w-[250px] md:w-[300px] h-[50px] flex items-center justify-center mt-4 md:mt-[10%] ml-0 md:ml-[10%]">
-              <p className="contratar m-1 font-bold text-brand2 transition-colors duration-300 ease-in-out">Agenda tu sesión</p>
+              <Link to="/contact" className="contratar m-1 font-bold text-brand2 transition-colors duration-300 ease-in-out">
+                Agenda tu sesión
+              </Link>
             </div>
           </div>
 
@@ -110,17 +119,17 @@ function Home() {
               </div>
               <div className="flex items-center">
                 <Phone className="text-brand2 text-2xl mr-2" />
-                <p className="text-xl">Teléfono: 608008081</p>
+                <p className="text-xl">Teléfono: 644451241</p>
               </div>
             </div>
             <hr className="border-t border-brand2 mb-4" />
             <div className="mt-auto">
-              <a
-                href="/reservar-cita-presencial"
+              <Link
+                to="/reservar-cita-presencial"
                 className="btn-reservar bg-brand2 text-bg1 py-2 px-6 rounded-full shadow-md flex items-center justify-center hover:bg-brand2-dark transition duration-300"
               >
                 Reservar cita <ArrowForward className="ml-2" />
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -134,17 +143,17 @@ function Home() {
               </div>
               <div className="flex items-center">
                 <Phone className="text-brand2 text-2xl mr-2" />
-                <p className="text-xl">Teléfono: 608008081</p>
+                <p className="text-xl">Teléfono: 644451241</p>
               </div>
             </div>
             <hr className="border-t border-brand2 mb-4" />
             <div className="mt-auto">
-              <a
-                href="/reservar-cita-online"
+              <Link
+                to="/reservar-cita-online"
                 className="btn-reservar bg-brand2 text-bg1 py-2 px-6 rounded-full shadow-md flex items-center justify-center hover:bg-brand2-dark transition duration-300"
               >
                 Reservar cita <ArrowForward className="ml-2" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -155,29 +164,32 @@ function Home() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Columna 1: Escríbeme */}
-            <div className="contacto-col flex flex-col items-center text-center">
+            <Link to="/contact" className="contacto-col flex flex-col items-center text-center">
               <Email className="text-brand2 text-6xl mb-4" />
               <h2 className="text-2xl font-bold text-brand2 mb-2">Escríbeme</h2>
               <p className="text-brand2 mb-1">violetaovejero@gmail.com</p>
               <p className="text-brand2">Contesto en 24 horas</p>
-            </div>
+            </Link>
             {/* Columna 2: Llámame */}
-            <div className="contacto-col flex flex-col items-center text-center">
+            <a href="tel:644451241" className="contacto-col flex flex-col items-center text-center">
               <Phone className="text-brand2 text-6xl mb-4" />
               <h2 className="text-2xl font-bold text-brand2 mb-2">Llámame</h2>
-              <p className="text-brand2 mb-1">608008081</p>
+              <p className="text-brand2 mb-1">644451241</p>
               <p className="text-brand2">De lunes a viernes de 09:00 a 20:00</p>
-            </div>
+            </a>
             {/* Columna 3: WhatsApp */}
-            <div className="contacto-col flex flex-col items-center text-center">
+            <div
+              className="contacto-col flex flex-col items-center text-center cursor-pointer"
+              onClick={handleWhatsAppClick}
+            >
               <WhatsApp className="text-brand2 text-6xl mb-4" />
               <h2 className="text-2xl font-bold text-brand2 mb-2">WhatsApp</h2>
-              <p className="text-brand2 mb-1">608008081</p>
+              <p className="text-brand2 mb-1">644451241</p>
               <p className="text-brand2">De lunes a viernes de 09:00 a 20:00</p>
             </div>
           </div>
         </div>
-      </motion.div>      
+      </motion.div>
     </>
   );
 }

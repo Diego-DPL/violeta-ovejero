@@ -2,6 +2,7 @@ import React, { useState } from "react";
 //import "./Contact.css";
 import { TextField, Button, MenuItem, IconButton, Grid } from "@mui/material";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import emailjs from 'emailjs-com'; // Importa EmailJS
 
 function Contact({ servicios }) {
   const [name, setName] = useState("");
@@ -9,13 +10,37 @@ function Contact({ servicios }) {
   const [service, setService] = useState("");
   const [message, setMessage] = useState("");
 
+  // Reemplaza los placeholders con tus IDs reales
+  const SERVICE_ID = 'service_gckl5eq';
+  const TEMPLATE_ID = 'template_ipobqom';
+  const USER_ID = 'rtn-XoI3iWp2xd1Oy';
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log({ name, email, service, message });
+  
+    const templateParams = {
+      name: name,
+      email: email,
+      service: service,
+      message: message,
+    };
+  
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, USER_ID)
+      .then((response) => {
+        console.log('Correo enviado con éxito!', response.status, response.text);
+        alert('¡Mensaje enviado con éxito!');
+        setName('');
+        setEmail('');
+        setService('');
+        setMessage('');
+      }, (error) => {
+        console.error('Error al enviar el correo:', error);
+        alert('Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.');
+      });
   };
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = "608008081"; // Reemplaza con el número de violeta
+    const phoneNumber = "644451241"; // Reemplaza con el número de violeta
     const url = `https://wa.me/${phoneNumber}`;
     window.open(url, "_blank");
   };
@@ -142,3 +167,10 @@ function Contact({ servicios }) {
 }
 
 export default Contact;
+
+
+//service_gckl5eq service ID
+//template_ipobqom template ID
+//rtn-XoI3iWp2xd1Oy Public Key
+//1cYjjKLYeQmda3ccMIU4i private Key
+//https://api.emailjs.com/api/v1.0/email/send
